@@ -10,6 +10,6 @@ public class Strings {
         //TODO
         //regular expression for testing syntax of Java veriable names
         //only ACII symbols allowed
-        return "[a-z][a-zA-Z0-9_$]*";
+        return "[a-z_$A-Z][a-zA-Z0-9$_]+|[a-z$A-Z]";
     }
 }

@@ -15,9 +15,14 @@ public class RegularExpressionsTest {
         assertTrue(Pattern.matches(javaVariable(), "var_Name"));
         assertTrue(Pattern.matches(javaVariable(), "var12"));
         assertTrue(Pattern.matches(javaVariable(), "varName$$"));
+        assertTrue(Pattern.matches(javaVariable(), "_varName"));
+        assertTrue(Pattern.matches(javaVariable(), "$"));
+        assertTrue(Pattern.matches(javaVariable(), "_a"));
+        assertTrue(Pattern.matches(javaVariable(), "A"));
 
         assertFalse(Pattern.matches(javaVariable(), "2varName"));
-        assertFalse(Pattern.matches(javaVariable(), "VarName"));
         assertFalse(Pattern.matches(javaVariable(), "var Name"));
+        assertFalse(Pattern.matches(javaVariable(), "1"));
+        assertFalse(Pattern.matches(javaVariable(), "_"));
     }
 }
